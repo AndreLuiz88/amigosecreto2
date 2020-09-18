@@ -37,3 +37,30 @@ app.use('/participantes', put);
 app.use('/participantes', del);
 
 module.exports = app;
+
+var nodemailer = require("nodemailer");
+
+var remetente = nodemailer.createTransport({
+    host: "smtp.live.com",
+    service: "hotmail",
+    port: 587,
+    secure: false,
+    auth:{
+    user: "email@email.com",
+    pass: "Sua Senha" }
+    });
+
+    var emailASerEnviado = {
+        from: "email@email.com",
+        to: "email@email.com",
+        subject: "Enviando Email com Node.js",
+        text: "Estou te enviando este email com node.js",
+        };
+
+        remetente.sendMail(emailASerEnviado, function(error){
+            if (error) {
+            console.log(error);
+            } else {
+            console.log("Email enviado com sucesso.");
+            }
+            });
