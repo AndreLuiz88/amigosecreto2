@@ -1,0 +1,28 @@
+{
+  "name": "str",
+  "version": "1.0.0",
+  "description": "amigosecreto",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./bin/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndreLuiz88/amigosecreto.git"
+  },
+  "author": "Andre Luiz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndreLuiz88/amigosecreto/issues"
+  },
+  "homepage": "https://github.com/AndreLuiz88/amigosecreto#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "http": "0.0.1-security"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
